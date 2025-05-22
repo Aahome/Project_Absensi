@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Form</title>
+    <link rel="stylesheet" href="Payment.css">
+</head>
+<body>
+    <a href="https://aahome.github.io/Shop-Website/" class="back-button">&lt;</a>
+    <h1 class="title">Payment Area</h1>
+    <div class="form-container">
+        <img src="Asset/Geda.png" alt="Payment Image" class="form-image" id="paymentImage">
+        <p class="image-text">You wanna buy a <span id="fName">item</span></p>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="Quantity">How Much:</label>
+                <input type="number" id="Quantity" name="Quantity" placeholder="Quantity" oninput="updatePrice()">
+                <div id="error-message" class="error">Quantity must be more than zero</div>
+            </div>
+            <div class="form-group">
+                <label for="choose">Sauce:</label>
+                <select name="Sauce" id="choose">
+                    <option value="1">-</option>
+                    <option value="2">Hot Sauce</option>
+                    <option value="3">Ranch</option>
+                    <option value="4">Barbeque</option>
+                </select>
+                <div id="error-message2" class="error">Choose the sauce</div>
+            </div>
+            <div class="form-group">
+                <label for="input3">Message:</label>
+                <input type="text" id="input3" name="input3" placeholder="Enter text">
+            </div>
+            <p id="priceDisplay">Total Price: $0</p>
+            <button type="button" class="submit-btn" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+
+    <script src="ShopNPayment.js"></script>
+</body>
+</html>
